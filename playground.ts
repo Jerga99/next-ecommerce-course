@@ -1,12 +1,31 @@
 
-type Person = {
+
+// TS recommend to use Interfaces over Types when possible
+
+
+
+// Describe data structures in more natural way
+// Describing objects
+// Shipment, Orders,
+interface Person {
   name: string
   age: number
 }
 
+// type aliases
+// to describe function types
+
+// type Person = {
+//   name: string
+//   age: number
+// }
+
+type Data = string
+
+
 
 export default function play() {
-  const name: string = "Filip"
+  const name: Data = "Filip"
   const age: number = 30
 
   const person: Person = {
