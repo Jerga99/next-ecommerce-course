@@ -1,14 +1,36 @@
 
 
-export default function play() {
-  const random = Math.random() > 0.5 ? "hello" : [1,2]
+interface Person {
+  name: string
+  age: number
+}
 
-  if (typeof random === "string") {
-    const upper = random.toUpperCase()
-  } else {
-    console.log(random)
+interface BusinessPerson extends Person {
+  salary: number
+}
+
+interface AcademicPerson extends Person {
+  publications: string[]
+}
+
+
+
+
+export default function play() {
+  const person: AcademicPerson = {
+    name: "filip",
+    age: 23,
+    publications: ["1", "2"]
   }
 
-  console.log(random.length)
+  const person2: BusinessPerson = {
+    name: "filip",
+    age: 23,
+    salary: 1000
+  }
 
+  function logPerson(person: Person) {}
+
+
+  logPerson(person2)
 }
