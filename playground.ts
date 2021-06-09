@@ -21,84 +21,21 @@ interface Person {
   prop2: number
 }
 
-type Human = BusinessPerson | AcademicPerson | { kind: "otherType", special: string}
-
-type RaceCar = {
-  name: string
-  maxSpeed: 200
-  team: string
-}
-
-type CityCar = {
-  name: string
-  space: string
-  maxSpeed: 100
-}
-
-type SUVCar = {
-  name: string
-  maxSpeed: 150
-  isCarbonFree: boolean
-}
-
-type Car = RaceCar | CityCar | SUVCar
+type Noop = () => any
+type Noop2 = () => void
 
 
 export default function play() {
 
-  const car: RaceCar = {
-    name: "Race Car",
-    maxSpeed: 200,
-    team: "ferari"
+
+  function fn1(x: Noop): void {
+    const result = x()
+    result()
   }
 
-  const person: Person = {
-    prop1: "",
-    prop2: 2,
-    name: "",
-    kind: "academic",
-    age: 23
+  function fn2(x: Noop2): void {
+    const result = x()
+    result()
   }
 
-  function printInfo(someObject: {[key: string]: unknown}) {
-
-    if (typeof someObject.age === "string") {
-      someObject.age.toUpperCase()
-    }
-  }
-
-  printInfo({
-    age: 23,
-    isMarried: true,
-    name: "Filip"
-  })
-
-  function logPersonInfo(human: Human) {
-    if (human.kind === "academic") {
-      console.log(human)
-    } else if (human.kind === "business") {
-      console.log(human)
-    } else if (human.kind === "otherType") {
-      console.log(human)
-    } else {
-      console.log(human)
-    }
-  }
-
-  function logCarInfo(car: Car) {
-    switch(car.maxSpeed) {
-      case 200:
-        console.log(car.team)
-        break;
-      case 100:
-        console.log(car)
-        break;
-      case 150:
-        console.log(car.isCarbonFree)
-        break;
-      default:
-        const _never: never = car
-        return _never
-    }
-  }
 }
