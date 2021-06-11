@@ -1,39 +1,17 @@
 
-
 interface Person {
   name: string
 }
 
-interface Student extends Person {
-  age: number
-}
+type SingleType<T> = T extends any[] ? T[number] : unknown
 
-interface PostGraduadeStudent extends Person {
-  age: number
-  projects: string[]
-}
-
-type StudentInfo<T extends any = Student> = T extends Student ? {
-  data: T
-  grades: number[]
-} : string
-
-type Car = {engine: string}
 
 export default function play() {
 
-  function logStudentInfo(info: StudentInfo<Student>) {
-    console.log(info)
-    console.log(info)
-  }
+  type Type1 = SingleType<string[]>
+  type Type2 = SingleType<number[]>
+  type Type3 = SingleType<Person>
 
-  const info = {
-    data: {
-      name: "Filip",
-      age: 30
-    },
-    grades: [1,2,3,1]
-  }
 
-  logStudentInfo(info)
+  type Type4 = string[][number]
 }
