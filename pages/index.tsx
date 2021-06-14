@@ -18,9 +18,11 @@ export default function Home({
   products
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 
+  getAllproducts()
+
   return (
     <div>
-      { products }
+      { JSON.stringify(products) }
     </div>
   )
 }
