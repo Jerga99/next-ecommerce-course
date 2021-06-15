@@ -13,12 +13,9 @@ export async function getStaticProps() {
   }
 }
 
-
 export default function Home({
   products
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-
-  getAllproducts()
 
   return (
     <div>
