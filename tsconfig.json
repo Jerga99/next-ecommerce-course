@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -16,7 +17,13 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+      "@common": ["framework/common"],
+      "@common/*": ["framework/common/*"],
+      "@framework": ["framework/shopify"],
+      "@framework/*": ["framework/shopify/*"]
+    }
   },
   "include": [
     "next-env.d.ts",

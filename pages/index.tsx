@@ -1,6 +1,6 @@
 
 import type { InferGetStaticPropsType } from "next"
-import getAllproducts from "../framework/shopify/product/get-all-products"
+import getAllproducts from "@framework/product/get-all-products"
 
 export async function getStaticProps() {
   const products = await getAllproducts()
