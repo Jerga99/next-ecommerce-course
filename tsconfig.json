@@ -18,7 +18,8 @@
       "@common": ["framework/common"],
       "@common/*": ["framework/common/*"],
       "@framework": ["framework/shopify"],
-      "@framework/*": ["framework/shopify/*"]
+      "@framework/*": ["framework/shopify/*"],
+      "@components/*": ["components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
