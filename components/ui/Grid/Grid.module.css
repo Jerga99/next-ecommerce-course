@@ -5,7 +5,6 @@
 
   & > * {
     @apply row-span-1 overflow-hidden;
-    height: 500px;
     max-height: 800px;
 
     @screen lg {
