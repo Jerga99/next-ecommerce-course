@@ -1,0 +1,5 @@
+
+
+.root {
+  @apply grid gap-0 grid-cols-3 grid-rows-2;
+}
