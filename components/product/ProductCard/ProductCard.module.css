@@ -1,6 +1,16 @@
 
 .root {
-  @apply relative;
+  @apply relative max-h-full;
+
+  &:hover {
+    & .productBg:before {
+      transform: scale(0.99);
+    }
+
+    & .productImage {
+      transform: scale(1.15);
+    }
+  }
 
   &:nth-child(6n + 1) .productBg {
     @apply bg-violet;
@@ -18,8 +28,6 @@
     @apply bg-cyan;
   }
 }
-
-
 
 .productBg {
   @apply absolute inset-0 z-0;
