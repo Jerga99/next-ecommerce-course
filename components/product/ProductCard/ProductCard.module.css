@@ -1,0 +1,28 @@
+
+.root {
+  @apply relative;
+}
+
+.productTag {
+  @apply absolute top-0 left-0 z-20;
+
+  & > * {
+    font-size: 2rem;
+    letter-spacing: 0.4px;
+  }
+}
+
+.productTitle {
+  @apply font-bold;
+  line-height: 2.2em;
+
+  & span {
+    @apply py-4 px-6;
+    box-decoration-break: clone;
+  }
+}
+
+.productPrice {
+  @apply pb-4 pt-2 px-6 font-semibold text-sm;
+  letter-spacing: 0.4px;
+}
