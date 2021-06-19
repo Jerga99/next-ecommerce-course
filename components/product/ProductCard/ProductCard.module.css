@@ -24,6 +24,12 @@
 .productBg {
   @apply absolute inset-0 z-0;
   background-color: #212529;
+
+  &:before {
+    @apply block w-full h-full bg-repeat-space;
+    content: "";
+    background-image: url("/product-pattern-bg.svg");
+  }
 }
 
 .productTag {
