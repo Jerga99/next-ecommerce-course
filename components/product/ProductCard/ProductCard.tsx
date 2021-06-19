@@ -13,6 +13,7 @@ const ProductCard: FC<Props> = ({product}) => {
   return (
     <Link href={`/products/${product.slug}`}>
       <a className={s.root}>
+        <div className={s.productBg}></div>
         <div className={s.productTag}>
           <h3 className={s.productTitle}>
             <span>{product.name}</span>
