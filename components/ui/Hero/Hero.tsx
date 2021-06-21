@@ -2,6 +2,7 @@
 import { FC } from "react"
 import s from "./Hero.module.css"
 import Link from "next/link"
+import { Container } from "@components/ui"
 
 interface Props {
   headline: string
@@ -12,21 +13,23 @@ interface Props {
 const Hero: FC<Props> = ({headline, description}) => {
   return (
     <div className="bg-black">
-      <div className={s.root}>
-        <h2 className={s.headline}>
-          {headline}
-        </h2>
-        <div>
-          <p className={s.description}>
-            {description}
-          </p>
-          <Link href="/">
-            <a className={s.link}>
-              Read it here
-            </a>
-          </Link>
+      <Container>
+        <div className={s.root}>
+          <h2 className={s.headline}>
+            {headline}
+          </h2>
+          <div>
+            <p className={s.description}>
+              {description}
+            </p>
+            <Link href="/">
+              <a className={s.link}>
+                Read it here
+              </a>
+            </Link>
+          </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }
