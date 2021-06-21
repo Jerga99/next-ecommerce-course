@@ -2,7 +2,12 @@
 
 
 .root {
+  @apply bg-black;
   height: 320px;
+}
+
+.secondary {
+  @apply bg-white;
 }
 
 .container {
