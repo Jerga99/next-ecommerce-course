@@ -1,15 +1,15 @@
 
 
 .root {
-  @apply grid grid-cols-1 py-32;
+  @apply flex flex-col py-32 justify-center;
 
   @screen md {
-    @apply grid-cols-2;
+    @apply flex-row;
   }
 }
 
 .headline {
-  @apply text-4xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none
+  @apply flex-1 max-w-xl text-4xl leading-10 font-extrabold text-white sm:text-5xl sm:leading-none
          sm:tracking-tight lg:text-6xl;
 }
 
@@ -18,5 +18,5 @@
 }
 
 .link  {
-  @apply text-white pt-3 font-bold hover:underline cursor-pointer;
+  @apply block text-white pt-3 font-bold hover:underline cursor-pointer;
 }
