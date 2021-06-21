@@ -3,18 +3,16 @@ import { ReactNode, FC } from "react";
 
 interface Props {
   children: ReactNode | ReactNode[]
+  el?: any
 }
 
 
-const Container: FC<Props> = ({children}) => {
+const Container: FC<Props> = ({children, el: Component = "div"}) => {
 
   return (
-    <div
-      style={{maxWidth: "1920px"}}
-      className="px-6 mx-auto"
-    >
+    <Component className="px-6 mx-auto max-w-8xl">
       {children}
-    </div>
+    </Component>
   )
 }
 

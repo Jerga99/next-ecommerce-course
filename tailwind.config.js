@@ -8,6 +8,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      maxWidth: {
+        "8xl": "1920px"
+      },
       colors: {
         primary: 'var(--primary)',
         'primary-2': 'var(--primary-2)',
