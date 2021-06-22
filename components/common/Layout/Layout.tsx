@@ -9,12 +9,11 @@ import { useUI } from "@components/ui/context"
 
 const Layout: FC = ({children}) => {
   const ui = useUI()
-  console.log(ui)
 
   return (
     <div className={s.root}>
       <Navbar />
-      <Sidebar>
+      <Sidebar isOpen={ui.isSidebarOpen}>
         <CartSidebar />
       </Sidebar>
       <main className="fit">
