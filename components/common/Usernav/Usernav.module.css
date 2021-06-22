@@ -10,6 +10,6 @@
          items-center outline-none text-primary;
 
  &:hover {
-   @apply text-accents-6 transition scale-110 duration-100;
+   @apply text-accents-6 scale-110;
  }
 }
