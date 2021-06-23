@@ -37,7 +37,7 @@ function uiReducer(state: StateValues, action: Action) {
     case "CLOSE_SIDEBAR": {
       return {
         ...state,
-        isSidebarOpen: false
+        isSidebarOpen: true
       }
     }
   }

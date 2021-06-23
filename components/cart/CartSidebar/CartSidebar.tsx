@@ -7,6 +7,8 @@ const CartSidebar: FC = () => {
   const isEmpty = true
   const { closeSidebar} = useUI()
 
+  console.log("Re-rendering CARTSIDEBAR")
+
   const rootClass = cn(
     "h-full flex flex-col",
     {"bg-secondary text-secondary": isEmpty}

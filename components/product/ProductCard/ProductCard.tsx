@@ -11,6 +11,7 @@ interface Props {
 const placeholderImage = "/product-image-placeholder.svg"
 const ProductCard: FC<Props> = ({product, variant = "simple"}) => {
 
+  console.log("Re-rendering PRODUCT")
   return (
     <Link href={`/products/${product.slug}`}>
       <a className={s.root}>
