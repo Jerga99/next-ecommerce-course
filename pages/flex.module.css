@@ -2,38 +2,19 @@
 
 .parent {
   display: flex;
+  /* row -> main axis is horizontal one */
+  /* col -> main axis is vertical one */
   flex-direction: row;
   height: 1500px;
+  justify-content: center;
 }
 
 .child {
+  margin: 1px;
   width: 200px;
   height: 200px;
   background-color: red;
-
-  /* flex-grow | flex-shrink ?? flex-basis; */
-  /* 1 | 1 | 0 */
-  flex: 1;
 }
 
-.child:first-child {
-  /* flex-basis: 200px; */
 
-  /*
-    1680 -3x - (x+ 200) = 0
-    1680 -3x -x -200 = 0
-    1480 -4x = 0
-    1480 = 4x
-    x = 370
-  */
-  /*
-    20% from 1680 = 336
-    1680 - 336 - 4x = 0
-    1344 = 4x
-    x = 336
-    336 + 336 = 672
-  */
-
-  flex-basis: 20%;
-}
 
