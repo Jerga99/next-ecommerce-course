@@ -1,0 +1,13 @@
+
+
+.parent {
+
+}
+
+.child {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  margin: 1px;
+  display: inline-block;
+}
