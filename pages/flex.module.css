@@ -1,7 +1,9 @@
 
 
 .parent {
-
+  display: flex;
+  flex-direction: row;
+  height: 1500px;
 }
 
 .child {
@@ -9,5 +11,13 @@
   height: 200px;
   background-color: red;
   margin: 1px;
-  display: inline-block;
+
+  /* flex-grow | flex-shrink ?? flex-basis; */
+  /* 1 | 1 | 0 */
+  /* flex: 1; */
+  flex-grow: 1;
+}
+
+.child:first-child {
+  flex-grow: 5;
 }
