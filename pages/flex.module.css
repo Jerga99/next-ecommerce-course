@@ -10,21 +10,30 @@
   width: 200px;
   height: 200px;
   background-color: red;
-  margin: 1px;
 
   /* flex-grow | flex-shrink ?? flex-basis; */
   /* 1 | 1 | 0 */
-  /* flex: 1; */
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 1;
 }
 
 .child:first-child {
-  flex-grow: 1;
-  flex-shrink: 2;
+  /* flex-basis: 200px; */
+
+  /*
+    1680 -3x - (x+ 200) = 0
+    1680 -3x -x -200 = 0
+    1480 -4x = 0
+    1480 = 4x
+    x = 370
+  */
+  /*
+    20% from 1680 = 336
+    1680 - 336 - 4x = 0
+    1344 = 4x
+    x = 336
+    336 + 336 = 672
+  */
+
+  flex-basis: 20%;
 }
 
-.child:last-child {
-  flex-grow: 1;
-  flex-shrink: 5;
-}
