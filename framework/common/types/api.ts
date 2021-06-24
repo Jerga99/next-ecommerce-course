@@ -6,7 +6,7 @@ export type ApiFetcherOptions = {
   variables?: Variables
 }
 
-export type Variables = {[key: string]: string}
+export type Variables = {[key: string]: string | undefined}
 
 export type ApiFetcherResults<T> = {
   data: T
