@@ -177,7 +177,6 @@ const colorMap: Record<string, string> = {
 }
 
 export function isDark(color: string = ''): boolean {
-debugger
   color = color.toLowerCase()
   // Equation from http://24ways.org/2010/calculating-color-contrast
   let rgb = colorMap[color] ? hexToRgb(colorMap[color]) : hexToRgb(color)
