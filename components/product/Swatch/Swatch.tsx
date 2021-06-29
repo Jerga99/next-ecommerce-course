@@ -3,6 +3,7 @@ import { FC } from "react"
 import s from "./Swatch.module.css"
 import { Check } from '@components/icons'
 import cn from "classnames"
+import { isDark } from "@lib/color"
 
 interface Props {
   color?: string
@@ -26,7 +27,8 @@ const Swatch: FC<Props> = ({
     {
       [s.active]: active,
       [s.color]: color,
-      [s.size]: variant === "size"
+      [s.size]: variant === "size",
+      [s.dark]: color && isDark(color)
     }
   )
 
