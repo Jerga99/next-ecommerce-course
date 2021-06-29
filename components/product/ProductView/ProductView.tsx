@@ -16,7 +16,7 @@ const ProductView: FC<Props> = ({ product }) => {
   const [ choices, setChoices ] = useState<Choices>({})
 
   const variant = getVariant(product, choices)
-
+  console.log(variant)
   return (
     <Container>
       <div className={cn(s.root, 'fit', "mb-5")}>
