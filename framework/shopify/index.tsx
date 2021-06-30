@@ -17,7 +17,7 @@ interface ShopifyApiProviderProps {
 export const ApiProvider = ({children}: ShopifyApiProviderProps) => {
 
   return (
-    <CoreApiProvider config={{...config, testKey: "testValue"}}>
+    <CoreApiProvider config={{...config}}>
       {children}
     </CoreApiProvider>
   )
