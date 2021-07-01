@@ -18,7 +18,6 @@ const fetchApi = async <T>({
       variables
     })
   })
-
   const { data, errors} = await res.json()
   // ?? is checking if left hand expression is null or undefined -> if it is go with right expression
   // || is checking if left hand expression is null, undefined, "", 0, false
