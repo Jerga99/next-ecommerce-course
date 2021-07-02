@@ -19,7 +19,8 @@ export const useMutationHook = (
     fetch: (input: any) => {
       return hook.fetcher({
         input,
-        fetch: fetcher
+        fetch: fetcher,
+        options: hook.fetcherOptions
       })
     }
   })
