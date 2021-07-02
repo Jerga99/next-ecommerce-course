@@ -23,3 +23,9 @@ export const useMutationHook = (
     }
   })
 }
+
+export const useSWRHook = (hook: any) => {
+  return hook.useHook({
+    fetch: hook.fetcher
+  })
+}
