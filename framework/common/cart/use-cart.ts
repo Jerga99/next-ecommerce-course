@@ -1,6 +1,6 @@
 
 import { useHook } from "../utils/use-hook"
-import { ApiHooks } from "@common/types/api"
+import { ApiHooks } from "@common/types/hooks"
 
 const useCart = () => {
   const hook = useHook((hooks: ApiHooks) => hooks.cart.useCart)
