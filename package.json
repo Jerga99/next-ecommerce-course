@@ -11,6 +11,7 @@
   "dependencies": {
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.3.1",
+    "js-cookie": "^2.2.1",
     "keen-slider": "^5.5.1",
     "next": "10.2.3",
     "react": "17.0.2",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/body-scroll-lock": "^2.6.1",
+    "@types/js-cookie": "^2.2.6",
     "@types/react": "^17.0.9",
     "autoprefixer": "^10.2.6",
     "deepmerge": "^4.2.2",
