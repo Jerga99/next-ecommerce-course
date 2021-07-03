@@ -8,7 +8,6 @@ const CartSidebar: FC = () => {
   const isEmpty = true
   const { closeSidebar} = useUI()
   const cart = useCart()
-  console.log(cart)
 
   const rootClass = cn(
     "h-full flex flex-col",
