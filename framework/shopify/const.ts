@@ -1,4 +1,6 @@
 
+export const SHOPIFY_CHECKOUT_URL_COOKIE = "shopify_checkoutUrl"
+export const SHOPIFY_COOKIE_EXPIRE = 90
 
 export const API_URL = process.env.NEXT_PUBLIC_FRAMEWORK === "shopify_local" ?
   process.env.NEXT_PUBLIC_LOCAL_STORE_DOMAIN :
