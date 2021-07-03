@@ -14,8 +14,8 @@ export const handler = {
     input: { checkoutId }
   }: any) {
     const data = await fetch({...options})
-    // we need checkout ID
     console.log(checkoutId)
+    debugger
     // Get checkout
 
     // If there is no checkout then create checkout
