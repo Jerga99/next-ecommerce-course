@@ -11,7 +11,7 @@ import {
 } from "../schema"
 
 import { Product } from "@common/types/product"
-import { Cart } from "@common/types/cart"
+import { Cart, LineItem } from "@common/types/cart"
 
 export const normalizeCart = (checkout: Checkout): Cart => {
   return {
@@ -30,7 +30,7 @@ export const normalizeCart = (checkout: Checkout): Cart => {
 
 const normalizeLineItem = ({
   node: { id, title, variant, ...rest}
-}: CheckoutLineItemEdge): any => {
+}: CheckoutLineItemEdge): LineItem => {
   return {
     id,
     variantId: String(variant?.id),
