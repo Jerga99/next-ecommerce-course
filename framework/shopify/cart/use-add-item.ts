@@ -1,11 +1,20 @@
 
 
 import { useAddItem } from "@common/cart"
+import { Cart } from "@common/types/cart"
 import { MutationHook } from "@common/types/hooks"
 import { getCheckoutId } from "@framework/utils"
 import { checkoutLineItemsAddMutation } from "@framework/utils/mutations"
 
 export default useAddItem
+
+export type AddItemHook = {
+  fetcherInput: {
+    variantId: string
+    quantity: number
+  }
+  data: Cart
+}
 
 
 export const handler: MutationHook = {
