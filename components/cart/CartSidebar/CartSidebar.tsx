@@ -56,9 +56,6 @@ const CartSidebar: FC = () => {
                 item={item}
                 currencyCode={data.currency.code}
               />
-              // <div key={item.id}>
-              //   {item.name} - {item.quantity}
-              // </div>
             )}
           </ul>
         </div>
