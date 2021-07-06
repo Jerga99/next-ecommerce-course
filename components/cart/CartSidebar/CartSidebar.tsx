@@ -7,9 +7,7 @@ import { LineItem } from '@common/types/cart'
 
 const CartSidebar: FC = () => {
   const { closeSidebar} = useUI()
-  const { data } = useCart()
-
-  const isEmpty = (data?.lineItems.length ?? 0) <= 0
+  const { data, isEmpty } = useCart()
 
   const rootClass = cn(
     "h-full flex flex-col",
