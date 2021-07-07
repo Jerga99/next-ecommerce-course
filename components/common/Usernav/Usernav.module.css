@@ -6,10 +6,18 @@
 }
 
 .item {
-  @apply mr-6 cursor-pointer transition flex
+  @apply relative mr-6 cursor-pointer transition flex
          items-center outline-none text-primary;
 
  &:hover {
    @apply text-accents-6 scale-110;
  }
+}
+
+.bagCount {
+  @apply border border-accents-1 bg-secondary text-secondary absolute rounded-full right-3 top-3 flex items-center justify-center font-bold text-xs;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
 }
