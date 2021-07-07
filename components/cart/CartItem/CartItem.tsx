@@ -22,7 +22,7 @@ const CartItem = ({
       })}
     >
       <div className="w-16 h-16 bg-violet relative overflow-hidden cursor-pointer">
-        <Link href={`/product/${item.path}`}>
+        <Link href={`/`}>
           <Image
             onClick={() => {}}
             className={s.productImage}
