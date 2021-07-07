@@ -5,6 +5,7 @@ import Link from 'next/link'
 import s from './CartItem.module.css'
 import { Trash, Plus, Minus } from '@components/icons'
 import { LineItem } from '@common/types/cart'
+import { Swatch } from '@components/product'
 
 const CartItem = ({
   item,
@@ -22,16 +23,14 @@ const CartItem = ({
       })}
     >
       <div className="w-16 h-16 bg-violet relative overflow-hidden cursor-pointer">
-        <Link href={`/`}>
-          <Image
-            onClick={() => {}}
-            className={s.productImage}
-            width={150}
-            height={150}
-            src={item.variant.image!.url}
-            unoptimized
-          />
-        </Link>
+        <Image
+          onClick={() => {}}
+          className={s.productImage}
+          width={150}
+          height={150}
+          src={item.variant.image!.url}
+          unoptimized
+        />
       </div>
       <div className="flex-1 flex flex-col text-base">
         <Link href={`/`}>
@@ -42,16 +41,24 @@ const CartItem = ({
             {item.name}
           </span>
         </Link>
-        { options && options.length > 0 &&
-          (options.map((option) =>
-            <span
-              key={`${item.id}-${option.displayName}`}
-              className="text-sm font-semibold text-accents-7"
-            >
-              {option.values[0].label}
-            </span>
-          ))
-        }
+        <div className="flex p-1">
+          { options && options.length > 0 &&
+            (options.map((option) => {
+              const value = option.values[0]
+              return (
+                <Swatch
+                  key={`${item.id}-${option.displayName}`}
+                  size="sm"
+                  onClick={() => {}}
+                  label={value.label}
+                  color={value.hexColor}
+                  variant={option.displayName}
+                >
+                </Swatch>
+              )}
+            ))
+          }
+        </div>
         <div className="flex items-center mt-3">
           <button type="button">
             <Minus onClick={() => {}}/>
