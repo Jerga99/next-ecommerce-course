@@ -6,6 +6,7 @@ import s from './CartItem.module.css'
 import { Trash, Plus, Minus } from '@components/icons'
 import { LineItem } from '@common/types/cart'
 import { Swatch } from '@components/product'
+import useRemoveItem from '@framework/cart/use-remove-item'
 
 const CartItem = ({
   item,
@@ -14,6 +15,7 @@ const CartItem = ({
   item: LineItem
   currencyCode: string
 }) => {
+  const removeItem = useRemoveItem()
   const price = (item.variant.price! * item.quantity) || 0
   const { options } = item
   return (
@@ -82,7 +84,9 @@ const CartItem = ({
       <div className="flex flex-col justify-between space-y-2 text-base">
         <span>{price} {currencyCode}</span>
         <button
-          onClick={() => {}}
+          onClick={ async () => {
+            const item = await removeItem("testing input")
+          }}
           className="flex justify-end outline-none"
         >
           <Trash />
