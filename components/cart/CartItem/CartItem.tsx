@@ -86,6 +86,7 @@ const CartItem = ({
         <button
           onClick={ async () => {
             const cart = await removeItem({id: item.id})
+            debugger
           }}
           className="flex justify-end outline-none"
         >
