@@ -84,9 +84,8 @@ const CartItem = ({
       <div className="flex flex-col justify-between space-y-2 text-base">
         <span>{price} {currencyCode}</span>
         <button
-          onClick={ async () => {
-            const cart = await removeItem({id: item.id})
-            debugger
+          onClick={() => {
+            removeItem({id: item.id})
           }}
           className="flex justify-end outline-none"
         >

@@ -1,5 +1,5 @@
 
-import useRemoveItem from "@common/cart/use-remove-item"
+import useRemoveItem, { UseRemoveItem} from "@common/cart/use-remove-item"
 import { Cart } from "@common/types/cart"
 import { MutationHook } from "@common/types/hooks"
 import { CheckoutLineItemsRemovePayload } from "@framework/schema"
@@ -7,7 +7,7 @@ import { checkoutToCart, getCheckoutId } from "@framework/utils"
 import { checkoutLineItemsRemoveMutation } from "@framework/utils/mutations"
 import useCart from "./use-cart"
 
-export default useRemoveItem
+export default useRemoveItem as UseRemoveItem<typeof handler>
 
 export type RemoveItemDescriptor = {
   fetcherInput: {
