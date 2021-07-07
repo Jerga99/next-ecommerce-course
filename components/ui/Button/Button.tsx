@@ -5,22 +5,32 @@ import cn from "classnames"
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode | ReactNode[]
+  isLoading?: boolean
 }
 
 const Button: FC<Props> = ({
   children,
   className,
+  isLoading = false,
   ...rest
 }) => {
 
+  const rootClassName = cn(
+    s.root,
+    className,
+    {
+      [s.loading]: isLoading
+    }
+  )
 
   return (
     <button
-      className={cn(s.root, className)}
+      className={rootClassName}
       type="button"
       {...rest}
     >
       {children}
+      { isLoading && <div>Loading...</div>}
     </button>
   )
 }
