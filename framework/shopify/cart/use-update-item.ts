@@ -1,5 +1,6 @@
 
-import { useUpdateItem } from "@common/cart"
+import { useUpdateItem} from "@common/cart"
+import { UseUpdateItem } from "@common/cart/use-update-item"
 import { Cart } from "@common/types/cart"
 import { MutationHook } from "@common/types/hooks"
 import { CheckoutLineItemsUpdatePayload } from "@framework/schema"
@@ -7,7 +8,7 @@ import { checkoutToCart, getCheckoutId } from "@framework/utils"
 import { checkoutLineItemsUpdateMutation } from "@framework/utils/mutations"
 import useCart from "./use-cart"
 
-export default useUpdateItem
+export default useUpdateItem as UseUpdateItem<typeof handler>
 
 export type UpdateItemDescriptor = {
   fetcherInput: {
